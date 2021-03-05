@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+	<%= gravatar_for @user, size: 120  %>
+	<%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<ul>
+  <li>
+    <%= @user.email %><br>
+    <%= @user.created_at %>, <%= @user.updated_at %>
+  </li>
+  <li><%= Time.now %></li>
+</ul>
